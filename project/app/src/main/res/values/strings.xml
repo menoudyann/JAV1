@@ -10,4 +10,6 @@
     <string name="tip_amount">Tip Amount</string>
     <string name="cover">Cover</string>
     <string name="title_place_holder" />
+    <string name="course_name" />
+    <string name="book_title" />
 </resources>
