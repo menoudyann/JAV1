@@ -23,9 +23,10 @@ class LoanAdapter(loanModelArrayList: ArrayList<Loan>) :
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val model: Loan = loanModelArrayList[position]
         holder.book.setText(model.book);
-        holder.contact.setText(model.contact);
-        val format = SimpleDateFormat("dd-MM-yyyy", Locale.getDefault())
-        holder.return_at.setText(format.format(model.return_at).toString());
+        holder.contact.setText("Loaned to " + model.contact);
+        val format = SimpleDateFormat("dd-MM-yyyy")
+        val date = Date(model.return_at)
+        holder.return_at.setText("Return at " + format.format(date));
 
     }
 

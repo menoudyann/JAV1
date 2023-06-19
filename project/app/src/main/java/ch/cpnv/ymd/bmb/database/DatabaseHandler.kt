@@ -76,8 +76,8 @@ class DatabaseHandler(var context: Context) :
         var cv = ContentValues();
         cv.put(COLUMN_LOAN_BOOKS, loan.book);
         cv.put(COLUMN_LOAN_CONTACTS, loan.contact);
-        cv.put(COLUMN_LOAN_CREATED_AT, loan.created_at.time);
-        cv.put(COLUMN_LOAN_RETURN_AT, loan.return_at.time);
+        cv.put(COLUMN_LOAN_CREATED_AT, loan.created_at);
+        cv.put(COLUMN_LOAN_RETURN_AT, loan.return_at);
         var result = db.insert(TABLE_LOANS, null, cv);
         if (result == (-1).toLong())
             Toast.makeText(context, "Failed", Toast.LENGTH_SHORT).show();
@@ -117,8 +117,8 @@ class DatabaseHandler(var context: Context) :
                 loan.id = result.getString(0).toInt();
                 loan.book = result.getString(1);
                 loan.contact = result.getString(2);
-                loan.created_at = Date(result.getLong(3));
-                loan.return_at = Date(result.getLong(4));
+                loan.created_at = result.getLong(3);
+                loan.return_at = result.getLong(4);
                 list.add(loan);
             } while (result.moveToNext());
         }
@@ -127,6 +127,6 @@ class DatabaseHandler(var context: Context) :
         return list;
     }
 
-    var list : MutableList<Loan> = ArrayList();
+    var list : MutableList<Book> = ArrayList();
 }
 

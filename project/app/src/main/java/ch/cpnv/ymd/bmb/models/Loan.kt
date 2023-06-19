@@ -8,16 +8,16 @@ class Loan {
     var id: Int = 0;
     lateinit var book: String;
     lateinit var contact: String;
-    lateinit var created_at: Date;
-    lateinit var return_at: Date;
+    var created_at: Long = 0;
+    var return_at: Long = 0;
 
     constructor(){
     }
 
-    constructor(book: String, contact : String, return_at : Date ){
+    constructor(book: String, contact : String, return_at : Long ){
         this.book = book;
         this.contact = contact;
-        this.created_at = Date();
+        this.created_at = Date().time
         this.return_at = return_at;
     }
 

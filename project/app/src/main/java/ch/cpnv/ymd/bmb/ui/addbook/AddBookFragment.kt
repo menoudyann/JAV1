@@ -5,14 +5,19 @@ import android.text.Editable
 import android.text.TextWatcher
 import android.util.Log
 import android.view.LayoutInflater
+import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
 import android.widget.EditText
 import android.widget.ImageView
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.Navigation.findNavController
 import androidx.navigation.findNavController
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.fragment.findNavController
 import ch.cpnv.ymd.bmb.R
 import ch.cpnv.ymd.bmb.database.DatabaseHandler
 import ch.cpnv.ymd.bmb.databinding.FragmentAddBookBinding
@@ -51,8 +56,14 @@ class AddBookFragment : Fragment() {
 
         val root: View = binding.root
 
+        val appBar = (requireActivity() as AppCompatActivity).supportActionBar
+        appBar?.setDisplayHomeAsUpEnabled(true)
+
+
         edt_url = binding.editTextImageURL
         imageView = binding.imageView
+
+        setHasOptionsMenu(true)
 
         edt_url.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(s: Editable) {
@@ -79,6 +90,16 @@ class AddBookFragment : Fragment() {
         })
 
         return root
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            android.R.id.home -> {
+                NavHostFragment.findNavController(requireParentFragment()).popBackStack()
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

@@ -9,6 +9,7 @@ import android.net.Uri
 import android.os.Bundle
 import android.provider.ContactsContract
 import android.view.LayoutInflater
+import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
 import android.widget.AdapterView
@@ -17,19 +18,23 @@ import android.widget.EditText
 import android.widget.Spinner
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.core.view.get
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
+import androidx.navigation.fragment.NavHostFragment.Companion.findNavController
 import ch.cpnv.ymd.bmb.R
 import ch.cpnv.ymd.bmb.database.DatabaseHandler
 import ch.cpnv.ymd.bmb.databinding.FragmentNewLoanBinding
 import ch.cpnv.ymd.bmb.models.Book
 import ch.cpnv.ymd.bmb.models.Loan
 import ch.cpnv.ymd.bmb.utils.DropdownBookAdapter
+import java.util.Calendar
 import java.util.Date
+import java.util.Locale
 
 
 class NewLoanFragment : Fragment() {
@@ -57,6 +62,11 @@ class NewLoanFragment : Fragment() {
         _binding = FragmentNewLoanBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
+        setHasOptionsMenu(true)
+
+        val appBar = (requireActivity() as AppCompatActivity).supportActionBar
+        appBar?.setDisplayHomeAsUpEnabled(true)
+
         buildDropDownList();
 
 
@@ -79,6 +89,16 @@ class NewLoanFragment : Fragment() {
         }
 
         return root
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            android.R.id.home -> {
+                findNavController(requireParentFragment()).popBackStack()
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
     }
 
     private fun checkContactPermission(): Boolean {
@@ -124,16 +144,13 @@ class NewLoanFragment : Fragment() {
             if (bookSelected!!.isNotEmpty() && binding.edtContact.text.toString()
                     .isNotEmpty() && binding.edtContact.text.toString() != "Choose a contact"
             ) {
-                val day = binding.returnDatePicker.dayOfMonth;
-                val month = binding.returnDatePicker.month;
-                val year = binding.returnDatePicker.year;
-
-                val date = Date(year, month, day);
+                val calendar = Calendar.getInstance();
+                calendar.set(binding.returnDatePicker.year, binding.returnDatePicker.month, binding.returnDatePicker.dayOfMonth)
 
                 var loan = Loan(
                     binding.bookSpinner.selectedItem.toString(),
                     binding.edtContact.text.toString(),
-                    date
+                    calendar.timeInMillis
                 )
                 var db = DatabaseHandler(context);
                 db.createLoan(loan);

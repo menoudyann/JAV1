@@ -2,15 +2,16 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/loan_card"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="10dp"
-    app:cardCornerRadius="25dp"
-    android:id="@+id/loan_card">
+    android:layout_marginTop="10dp"
+    android:layout_marginBottom="10dp"
+    app:cardCornerRadius="25dp">
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="110dp"
         android:background="@color/lightGrey"
         android:padding="16dp">
 
@@ -21,7 +22,8 @@
             android:layout_alignParentTop="true"
             android:layout_toEndOf="@id/card_image_loan"
             android:text="Title"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/contact"
@@ -30,7 +32,8 @@
             android:layout_below="@id/title"
             android:layout_toEndOf="@id/card_image_loan"
             android:text="Author"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/return_at"
@@ -40,7 +43,8 @@
             android:layout_marginTop="0dp"
             android:layout_toEndOf="@id/card_image_loan"
             android:text="ISBN"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textSize="16sp" />
     </RelativeLayout>
 
 </androidx.cardview.widget.CardView>

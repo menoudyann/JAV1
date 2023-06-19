@@ -8,12 +8,15 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import ch.cpnv.ymd.bmb.R
 import ch.cpnv.ymd.bmb.database.DatabaseHandler
 import ch.cpnv.ymd.bmb.databinding.FragmentHomeBinding
 import ch.cpnv.ymd.bmb.models.Book
 import ch.cpnv.ymd.bmb.models.Loan
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class HomeFragment : Fragment() {
 
@@ -25,6 +28,7 @@ class HomeFragment : Fragment() {
     private lateinit var loanRV: RecyclerView
     private lateinit var adapter: LoanAdapter
     private lateinit var loanList: ArrayList<Loan>
+    private lateinit var btnNewLoan: FloatingActionButton;
 
 
     override fun onCreateView(
@@ -41,8 +45,18 @@ class HomeFragment : Fragment() {
         loanRV = binding.idRVLoans
         buildRecyclerView()
 
-
         return root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        btnNewLoan= binding.btnNewLoan
+
+        binding.btnNewLoan.setOnClickListener {
+            view.findNavController().navigate(R.id.navigation_new_loan)
+        }
+
     }
 
     private fun buildRecyclerView() {
@@ -66,7 +80,7 @@ class HomeFragment : Fragment() {
         // setting adapter to
         // our recycler view.
 
-        //binding.bookNumber.setText(bookList.size.toString());
+        binding.loanNumber.setText(loanList.size.toString());
         loanRV.adapter = adapter
     }
 
