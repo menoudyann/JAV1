@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="ch.cpnv.ymd.bmb.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/navigation_new_loan"
+        android:name="ch.cpnv.ymd.bmb.ui.newloan.NewLoanFragment"
+        android:label="@string/title_new_loan"
+        tools:layout="@layout/fragment_new_loan" />
+
+    <fragment
+        android:id="@+id/navigation_books"
+        android:name="ch.cpnv.ymd.bmb.ui.books.BooksFragment"
+        android:label="@string/title_books"
+        tools:layout="@layout/fragment_books" >
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_add_book"
+        android:name="ch.cpnv.ymd.bmb.ui.books.AddBookFragment"
+        android:label="@string/title_add_book"
+        tools:layout="@layout/fragment_add_book" />
+</navigation>

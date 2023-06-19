@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.newloan.NewLoanFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <Spinner
+                android:id="@+id/bookSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="@color/lightGrey" />
+
+            <EditText
+                android:id="@+id/edtContact"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/purple_500"
+                android:clickable="true"
+                android:drawableLeft="@drawable/perso"
+                android:drawablePadding="10dp"
+                android:drawableTint="#FFFFFF"
+                android:editable="false"
+                android:padding="10dp"
+                android:text="Choose a contact"
+                android:textAlignment="textStart"
+                android:textColor="#FFFFFF" />
+
+            <DatePicker
+                android:id="@+id/return_date_picker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:dayOfWeekBackground="#FFFFFF"
+                android:headerBackground="@color/purple_500" />
+
+            <Button
+                android:id="@+id/btnCreateLoan"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:layout_marginTop="16dp"
+                android:text="Save" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

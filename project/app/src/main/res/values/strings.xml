@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">bmb</string>
+    <string name="title_home">Home</string>
+    <string name="title_new_loan">New Loan\n</string>
+    <string name="title_books">Books</string>
+    <string name="title_add_book">Add a book</string>
+</resources>
