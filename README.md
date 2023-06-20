@@ -26,6 +26,11 @@ Il suffit de:
 3. Récupérer les dépendances (fait automatiquement normalement) via le build.gradle.
 4. Lancer le projet
 
+```
+note: if the project does not build because of duplicate files in the build folder (example: MainActivity, MainActivity 02),
+just clean the project (build > clean project).
+```
+
 ## Version 1.0
 Il s'agit simplement de la conception de projet, aucun code n'est présent dans cette version. 
 
