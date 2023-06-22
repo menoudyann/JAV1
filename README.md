@@ -26,6 +26,14 @@ Il suffit de:
 3. Récupérer les dépendances (fait automatiquement normalement) via le build.gradle.
 4. Lancer le projet
 
+```
+note: if the project does not build because of duplicate files in the build folder (example: MainActivity, MainActivity 02),
+just clean the project (build > clean project).
+```
+
+## Version 1.0
+Il s'agit simplement de la conception de projet, aucun code n'est présent dans cette version. 
+
 ## Version 2.0
 Durant ce projet, et au fil de l'implémentation, j'ai passablement modifié le design inital car celui-ci ne respectait pas les guidelines Android.
 Pour ce qui est du code, je me suis principalement basé sur le template de navigation mis à disposition par Android Studio. Celui-ci m'a permis d'avoir
