@@ -10,18 +10,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="11fb6170-bd4f-4f18-ad2e-97bde8a7969e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../documentation/mockups_4.png" beforeDir="false" afterPath="$PROJECT_DIR$/../documentation/mockups_4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/ch/cpnv/ymd/bmb/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ch/cpnv/ymd/bmb/MainActivity.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/ch/cpnv/ymd/bmb/database/DatabaseHandler.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ch/cpnv/ymd/bmb/database/DatabaseHandler.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/ch/cpnv/ymd/bmb/models/Loan.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ch/cpnv/ymd/bmb/models/Loan.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/ch/cpnv/ymd/bmb/ui/addbook/AddBookFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ch/cpnv/ymd/bmb/ui/addbook/AddBookFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/ch/cpnv/ymd/bmb/ui/home/HomeFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ch/cpnv/ymd/bmb/ui/home/HomeFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/ch/cpnv/ymd/bmb/ui/newloan/NewLoanFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ch/cpnv/ymd/bmb/ui/newloan/NewLoanFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/ch/cpnv/ymd/bmb/utils/LoanAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ch/cpnv/ymd/bmb/utils/LoanAdapter.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/book_card.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/book_card.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/loan_card.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/loan_card.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/ch/cpnv/ymd/bmb/utils/BookAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ch/cpnv/ymd/bmb/utils/BookAdapter.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,25 +32,28 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectId" id="2RFuddEo9597fqgSSiwHNfr4b72" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "cidr.known.project.marker": "true",
-    "last_opened_file_path": "/Users/yannmenoud/Desktop/CPNV/JAV/JAV1/project/app/src/main/res/layout",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/yannmenoud/Desktop/CPNV/JAV/JAV1/project&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/src/main/res/layout" />

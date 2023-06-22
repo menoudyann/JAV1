@@ -109,7 +109,7 @@ class DatabaseHandler(var context: Context) :
     fun getAllLoans() : MutableList<Loan>{
         var list : MutableList<Loan> = ArrayList();
         db = this.readableDatabase;
-        val query = "SELECT * FROM $TABLE_LOANS";
+        val query = "SELECT * FROM $TABLE_LOANS WHERE $COLUMN_LOAN_RETURN_AT >= ${Date().time}";
         val result = db.rawQuery(query, null);
         if (result.moveToFirst()) {
             do {
@@ -128,5 +128,6 @@ class DatabaseHandler(var context: Context) :
     }
 
     var list : MutableList<Book> = ArrayList();
+
 }
 
